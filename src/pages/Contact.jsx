@@ -7,6 +7,7 @@ import ContactButtons from '../components/ContactButtons';
 import { shop } from '../data/shop';
 import { getDefaultEnquiry } from '../utils/whatsapp';
 import { getEmailUrl } from '../utils/phone';
+import { getAssetUrl } from '../utils/assets';
 
 const Contact = () => {
   return (
@@ -26,7 +27,7 @@ const Contact = () => {
             <div className="col-12 col-md-5 col-lg-4 text-center">
               <div className="position-relative d-inline-block">
                 <img 
-                  src="/images/electrician_pointing.jpg" 
+                  src={getAssetUrl('/images/electrician_pointing.jpg')} 
                   alt="Certified Electrician Directing to Contact Details" 
                   className="img-fluid rounded-4"
                   style={{ 

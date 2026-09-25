@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { getProductEnquiry } from '../utils/whatsapp';
+import { getAssetUrl } from '../utils/assets';
 
 const ProductCard = ({ product }) => {
   return (
@@ -17,7 +18,7 @@ const ProductCard = ({ product }) => {
         style={{ backgroundColor: 'var(--bg-secondary)' }}
       >
         {product.image ? (
-          <img src={product.image} alt={product.name} className="w-100 h-100 object-fit-contain p-2 p-sm-3" />
+          <img src={getAssetUrl(product.image)} alt={product.name} className="w-100 h-100 object-fit-contain p-2 p-sm-3" />
         ) : (
           <div className="w-100 h-100 d-flex align-items-center justify-content-center">
             <i className="bi bi-box-seam opacity-50" style={{ fontSize: '3rem', color: 'var(--brand-navy)' }}></i>

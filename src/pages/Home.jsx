@@ -18,6 +18,7 @@ import { getLocalBusinessSchema, getFaqSchema } from '../utils/seo';
 import { getDefaultEnquiry, getWhatsAppUrl } from '../utils/whatsapp';
 import { getCallUrl } from '../utils/phone';
 import { useTheme, DOMAINS } from '../context/ThemeContext';
+import { getAssetUrl } from '../utils/assets';
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 50 },
@@ -527,7 +528,7 @@ const Home = () => {
                         <div className="d-flex gap-3 align-items-center mb-3">
                           {offer.image && (
                             <img 
-                              src={offer.image} 
+                              src={getAssetUrl(offer.image)} 
                               alt={offer.title} 
                               className="rounded-3 shadow-sm flex-shrink-0"
                               style={{ width: '84px', height: '112px', objectFit: 'cover' }}

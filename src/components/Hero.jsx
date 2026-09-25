@@ -4,6 +4,7 @@ import { shop } from '../data/shop';
 import { DOMAINS } from '../context/ThemeContext';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { getCallUrl } from '../utils/phone';
+import { getAssetUrl } from '../utils/assets';
 
 const slides = [
   {
@@ -191,7 +192,7 @@ const Hero = () => {
             transition={{ duration: SLIDE_DURATION / 1000 + 1.2, ease: 'easeOut' }}
             className="w-100 h-100 hero-slide-bg"
             style={{
-              backgroundImage: `url(${isMobile ? (slide.mobileImage || slide.image) : slide.image})`,
+              backgroundImage: `url(${getAssetUrl(isMobile ? (slide.mobileImage || slide.image) : slide.image)})`,
               backgroundSize: 'cover',
               backgroundPosition: isMobile ? (slide.mobilePosition || 'center center') : 'center right',
               willChange: 'transform'

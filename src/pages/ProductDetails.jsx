@@ -6,6 +6,7 @@ import { shop } from '../data/shop';
 import { products } from '../data/products';
 import { getProductEnquiry } from '../utils/whatsapp';
 import { getCallUrl } from '../utils/phone';
+import { getAssetUrl } from '../utils/assets';
 
 const ProductDetails = () => {
   const { slug } = useParams();
@@ -55,7 +56,7 @@ const ProductDetails = () => {
               >
                 {product.image ? (
                   <img 
-                    src={product.image} 
+                    src={getAssetUrl(product.image)} 
                     alt={product.name} 
                     className="img-fluid rounded-3" 
                     style={{ maxHeight: '380px', width: '100%', objectFit: 'contain' }} 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { DOMAINS } from '../context/ThemeContext';
+import { getAssetUrl } from '../utils/assets';
 
 const CategoryCard = ({ category, activeDomain = DOMAINS.ALL }) => {
   const isMatching = 
@@ -48,7 +49,7 @@ const CategoryCard = ({ category, activeDomain = DOMAINS.ALL }) => {
         ) : null}
         <div className="category-img-wrapper position-relative" style={{ height: '180px', backgroundColor: 'var(--bg-secondary)' }}>
           {category.image ? (
-            <img src={category.image} alt={category.name} className="w-100 h-100" style={{ objectFit: 'cover' }} />
+            <img src={getAssetUrl(category.image)} alt={category.name} className="w-100 h-100" style={{ objectFit: 'cover' }} />
           ) : (
             <div className="w-100 h-100 d-flex align-items-center justify-content-center" style={{ backgroundColor: 'var(--bg-secondary)' }}>
               <i className={`bi ${category.icon} display-4`} style={{ color: 'var(--brand-blue)' }}></i>

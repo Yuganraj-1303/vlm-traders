@@ -3,6 +3,7 @@ import SEO from '../components/SEO';
 import { shop } from '../data/shop';
 import { offers } from '../data/offers';
 import { getOfferEnquiry } from '../utils/whatsapp';
+import { getAssetUrl } from '../utils/assets';
 
 const Offers = () => {
   const [activePoster, setActivePoster] = useState(null);
@@ -64,7 +65,7 @@ const Offers = () => {
                           title="Click to view full poster"
                         >
                           <img 
-                            src={offer.image} 
+                            src={getAssetUrl(offer.image)} 
                             alt={offer.title} 
                             className="img-fluid rounded-3"
                             style={{ maxHeight: '520px', objectFit: 'contain', transition: 'transform 0.3s ease' }}
@@ -245,7 +246,7 @@ const Offers = () => {
               <i className="bi bi-x-lg fw-bold"></i>
             </button>
             <img 
-              src={activePoster} 
+              src={getAssetUrl(activePoster)} 
               alt="Offer Poster Full View" 
               className="img-fluid rounded-4 shadow-lg"
               style={{ maxHeight: '85vh', objectFit: 'contain' }}

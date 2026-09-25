@@ -6,6 +6,7 @@ import { services } from '../data/services';
 import { useTheme, DOMAINS } from '../context/ThemeContext';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 import { getCallUrl } from '../utils/phone';
+import { getAssetUrl } from '../utils/assets';
 
 const domainBanners = {
   [DOMAINS.ELECTRICAL]: {
@@ -247,7 +248,7 @@ const Services = () => {
                   className="position-relative d-inline-block"
                 >
                   <img 
-                    src={currentBanner.technicianImage} 
+                    src={getAssetUrl(currentBanner.technicianImage)} 
                     alt={currentBanner.technicianRole}
                     className="img-fluid position-relative d-block mx-auto rounded-4"
                     style={{

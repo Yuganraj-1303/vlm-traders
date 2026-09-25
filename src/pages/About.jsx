@@ -4,6 +4,7 @@ import BusinessInfo from '../components/BusinessInfo';
 import OpeningHours from '../components/OpeningHours';
 import GoogleMap from '../components/GoogleMap';
 import { shop } from '../data/shop';
+import { getAssetUrl } from '../utils/assets';
 
 const About = () => {
   return (
@@ -64,7 +65,7 @@ const About = () => {
               >
                 <div className="position-relative" style={{ maxHeight: '550px', overflow: 'hidden', background: '#0B2545' }}>
                   <img 
-                    src="/images/vlm_storefront.jpg" 
+                    src={getAssetUrl('/images/vlm_storefront.jpg')} 
                     alt="VLM Traders & Services Storefront in Ponneri" 
                     className="w-100 object-fit-cover shadow-sm hover-lift"
                     style={{ maxHeight: '550px', objectPosition: 'center', transition: 'transform 0.5s ease' }}

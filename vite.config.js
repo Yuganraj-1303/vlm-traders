@@ -4,6 +4,7 @@ import purgecss from '@fullhuman/postcss-purgecss'
 
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
+  base: '/vlm-traders/',
   server: {
     host: true,
     port: 5173,

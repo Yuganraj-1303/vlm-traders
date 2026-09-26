@@ -13,9 +13,9 @@ export const shop = {
 
   address: "No. 08, Venugopal Street, Chinnakavanam, Ponneri - 601204",
 
-  googleMapsUrl: "https://maps.google.com/?q=Venugopal+Street,+Chinnakavanam,+Ponneri",
-  latitude: "13.3280",
-  longitude: "80.2016",
+  googleMapsUrl: "https://www.google.com/maps?q=13.345362226855839,80.19475674964939",
+  latitude: "13.345362226855839",
+  longitude: "80.19475674964939",
 
   openingHours: {
     monday: "9:00 AM - 9:00 PM",
